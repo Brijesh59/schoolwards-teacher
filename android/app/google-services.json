@@ -1,0 +1,875 @@
+{
+  "project_info": {
+    "project_number": "175551293201",
+    "firebase_url": "https://schoolwards-teacher.firebaseio.com",
+    "project_id": "schoolwards-teacher",
+    "storage_bucket": "schoolwards-teacher.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:b86076bf91186c8c",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.ajinkyataraschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:dd481fb341b8c9c4",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.ascendschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:53998c1b542e9e78",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.bmcstaff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:bc5f22ceb7bcbd10",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.godshandschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:f54956cf2b8813a2",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.gsschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:611f116c08e4da56",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.jaihindschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:d79b657913c43460",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.jpschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:650f630314e41c1a",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.kacfschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:9f71bc780aec9153",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.laurelpraiseschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:2f41c91ebce2f125",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.limraschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:cebbfa3d5f0cbf5b",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.muktaischoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:c38dae45234b3016",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.npschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:b31aefaf76dd4d59",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.rsgpvbhorschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:014350ec8a5934d7",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.sahyadrischoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:8de932b5cf2e4161",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.schoolwardsteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:61a7fca5ad0a9f5f",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.smpesschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:af187cceef462f72",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.svsschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:62a50ca22a1311a2",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.systelschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:08b96b60a55f5e50",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.teacherlibrary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:6244993614e699fc",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.ujjwalschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:bbcd81183e587387",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.wiseupschoolteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:d1bf45777999faa8",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwards.xplodteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:580cc61208641e5b",
+        "android_client_info": {
+          "package_name": "com.kupl.schoolwardsadmin.arihantsolapur"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175551293201:android:c7b552766f878141e38eb0",
+        "android_client_info": {
+          "package_name": "com.schoolwardsteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTfYN_cKbeNmOaKNbTYjW66mKQG94VF-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175551293201-lpn94agtahhcafdg6r9biim30cd0irtp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175551293201-55vuvc28srvmaauu9c7rkcb121b47cbc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schoolwards.schoolwardsteacher"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

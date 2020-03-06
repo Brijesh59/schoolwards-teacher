@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>419637589867-4kq466o2r33cpnrn42715cmsh1so1nj1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.419637589867-4kq466o2r33cpnrn42715cmsh1so1nj1</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>419637589867-8sshp3vf7141518j3sdi92dn88u2ek43.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCiQrr3pIXh0LRTPDtEGnJxo-AsWbBFcZU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>419637589867</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.SchoolwardsApp</string>
+	<key>PROJECT_ID</key>
+	<string>school-9e2ce</string>
+	<key>STORAGE_BUCKET</key>
+	<string>school-9e2ce.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:419637589867:ios:4d86af2e58da39eb6dbe2e</string>
+	<key>DATABASE_URL</key>
+	<string>https://school-9e2ce.firebaseio.com</string>
+</dict>
+</plist>
