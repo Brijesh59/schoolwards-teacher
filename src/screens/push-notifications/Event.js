@@ -3,6 +3,8 @@ import {StyleSheet, View, Alert, TouchableOpacity, Text} from 'react-native'
 import { Container, Content, Item, Icon, Right,Button, DatePicker} from 'native-base'
 import AsyncStorage from '@react-native-community/async-storage'
 import Toast from 'react-native-simple-toast'
+import Snackbar from 'react-native-snackbar'
+
 import DateTimePicker from '@react-native-community/datetimepicker'
 import {CalendarIcon} from '../../components/common/Icons'
 import CustomHeader from '../../components/common/CustomHeader'
@@ -149,11 +151,19 @@ export default function Event() {
 
     const handleSubmit = async() => {
         if(!event || !notes || selectedStudents.length === 0){
-            Alert.alert(
-                'Alert',
-                'Please fill all the fields.'
-            )
-            return
+            // Alert.alert(
+            //     'Alert',
+            //     'Please fill all the fields.'
+            // )
+            return Snackbar.show({
+                text: 'Please fill all the fields',
+                duration: Snackbar.LENGTH_SHORT,
+                backgroundColor: '#EA514F',
+                action: {
+                    text: 'Okay',
+                    onPress: ()=> Snackbar.dismiss()
+                }
+            })
         }
         setIsLoading(true)
         const [standard, division] = classSection[selectedClassSection].split(' ')
@@ -180,10 +190,26 @@ export default function Event() {
             setEvent('')
             setNotes('')
             setVenue('')
-            return Toast.show('Message Sent', Toast.SHORT, Toast.BOTTOM)
+            return Snackbar.show({
+                text: 'Message Sent',
+                duration: Snackbar.LENGTH_LONG,
+                backgroundColor: '#77E778',
+                action: {
+                    text: 'Okay',
+                    onPress: ()=> Snackbar.dismiss()
+                }
+            })
         }
         else{
-            return Toast.show('Failed to send Message', Toast.SHORT, Toast.BOTTOM)
+            return Snackbar.show({
+                text: 'Failed to send Message',
+                duration: Snackbar.LENGTH_LONG,
+                backgroundColor: '#EA514F',
+                action: {
+                    text: 'Okay',
+                    onPress: ()=> Snackbar.dismiss()
+                }
+            })
         } 
     }
 

@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import {StyleSheet, View, Alert, TouchableOpacity} from 'react-native'
 import { Container, Content, Text} from 'native-base'
 import Toast from 'react-native-simple-toast'
+import Snackbar from 'react-native-snackbar'
+
 import AsyncStorage from '@react-native-community/async-storage'
 
 import CustomHeader from '../../components/common/CustomHeader'
@@ -81,11 +83,15 @@ export default function Message() {
 
     const handleSubmit = async() => {
         if(!subject || !details || selectedStudent === ''){
-            Alert.alert(
-                'Alert',
-                'Please fill all the fields.'
-            )
-            return
+            return Snackbar.show({
+                text: 'Please fill all the fields',
+                duration: Snackbar.LENGTH_SHORT,
+                backgroundColor: '#EA514F',
+                action: {
+                    text: 'Okay',
+                    onPress: ()=> Snackbar.dismiss()
+                }
+            })
         }
         setIsLoading(true)
         const [standard, division] = classSection[selectedClassSection].split(' ')
@@ -107,10 +113,26 @@ export default function Message() {
         if(data.response === 'success'){
             setSubject('')
             setDetails('')
-            return Toast.show('Message Sent', Toast.SHORT, Toast.BOTTOM)
+            return Snackbar.show({
+                text: 'Message Sent',
+                duration: Snackbar.LENGTH_LONG,
+                backgroundColor: '#77E778',
+                action: {
+                    text: 'Okay',
+                    onPress: ()=> Snackbar.dismiss()
+                }
+            })
         }
         else{
-            return Toast.show('Failed to send Message', Toast.SHORT, Toast.BOTTOM)
+            return Snackbar.show({
+                text: 'Failed to send Message',
+                duration: Snackbar.LENGTH_LONG,
+                backgroundColor: '#EA514F',
+                action: {
+                    text: 'Okay',
+                    onPress: ()=> Snackbar.dismiss()
+                }
+            })
         } 
     }
 

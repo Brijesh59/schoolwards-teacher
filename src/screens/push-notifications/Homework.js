@@ -3,7 +3,7 @@ import {StyleSheet, View, Alert, TouchableOpacity} from 'react-native'
 import { Container, Content, Text, Item, Icon, Right, DatePicker} from 'native-base'
 import AsyncStorage from '@react-native-community/async-storage'
 import Toast from 'react-native-simple-toast'
-
+import Snackbar from 'react-native-snackbar'
 import CustomHeader from '../../components/common/CustomHeader'
 import CustomInput from '../../components/common/CustomInput'
 import ActivityLoader from '../../components/common/ActivityLoader'
@@ -93,11 +93,15 @@ export default function Homework() {
 
     const handleSubmit = async() => {
         if(!subject || !details || selectedStudents.length === 0){
-            Alert.alert(
-                'Alert',
-                'Please fill all the fields.'
-            )
-            return
+            return Snackbar.show({
+                text: 'Please fill all the fields',
+                duration: Snackbar.LENGTH_SHORT,
+                backgroundColor: '#EA514F',
+                action: {
+                    text: 'Okay',
+                    onPress: ()=> Snackbar.dismiss()
+                }
+            })
         }
         setIsLoading(true)
         const [standard, division] = classSection[selectedClassSection].split(' ')
@@ -120,10 +124,26 @@ export default function Homework() {
         if(data.response === 'success'){
             setSubject('')
             setDetails('')
-            return Toast.show('Message Sent', Toast.SHORT, Toast.BOTTOM)
+            return Snackbar.show({
+                text: 'Message Sent',
+                duration: Snackbar.LENGTH_LONG,
+                backgroundColor: '#77E778',
+                action: {
+                    text: 'Okay',
+                    onPress: ()=> Snackbar.dismiss()
+                }
+            })
         }
         else{
-            return Toast.show('Failed to send Message', Toast.SHORT, Toast.BOTTOM)
+            return Snackbar.show({
+                text: 'Failed to send Message',
+                duration: Snackbar.LENGTH_LONG,
+                backgroundColor: '#EA514F',
+                action: {
+                    text: 'Okay',
+                    onPress: ()=> Snackbar.dismiss()
+                }
+            })
         } 
     }
 
