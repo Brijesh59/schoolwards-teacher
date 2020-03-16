@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react'
-import {StyleSheet, TouchableOpacity, FlatList, View, Alert, AppState, ScrollView} from 'react-native'
+import {StyleSheet, TouchableOpacity, View, ScrollView} from 'react-native'
 import Modal from 'react-native-modal'
-import {Left, Button, Title, Body, Right, Header, Drawer, Text, Radio, ListItem, CheckBox } from 'native-base'
+import { Text, CheckBox } from 'native-base'
 import config from '../../utils/config'
 import CustomButton from './CustomButton'
 
@@ -61,18 +61,12 @@ export default function CustomModal({isModalVisible, setIsModalVisible, students
                 animationOutTiming={200}
                 backdropTransitionOutTiming={0} 
                 onBackdropPress={handleCancel}>
-                <View style={styles.modalContent}>     
-                   
-                    <View style={{
-                        width: '80%',
-                        marginLeft: 15,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        paddingTop: 10,
-                        paddingBottom: 10,
-                        padding: 5}}
-                        >
-                        <Text style={{fontSize: 18, color: config.primaryColor }}>Select Students</Text> 
+                <View style={styles.modalContent}>       
+                    <View style={styles.modalHeader}>
+                        <Text 
+                            style={{fontSize:18,color:config.primaryColor}}>
+                            Select Students
+                        </Text> 
                         <CheckBox 
                             style={{marginTop: 5}}
                             checked={all}
@@ -82,12 +76,8 @@ export default function CustomModal({isModalVisible, setIsModalVisible, students
                     <ScrollView style={{maxHeight: 400}}>
                         {
                             students && students.map(student => (
-                                <TouchableOpacity style={{
-                                    width: '80%',
-                                    marginLeft: 15,
-                                    flexDirection: 'row',
-                                    justifyContent: 'space-between',
-                                    padding: 5}}
+                                <TouchableOpacity 
+                                    style={styles.listStyle}
                                     activeOpacity={0.6}
                                     key={student.id}
                                     onPress={()=> handleStudentCheckBox(student)}>
@@ -109,13 +99,7 @@ export default function CustomModal({isModalVisible, setIsModalVisible, students
                         <CustomButton 
                             title="Cancel"
                             onPressFunction={handleCancel}
-                            style={{
-                                width: '40%',
-                                borderColor: config.primaryColor,
-                                borderWidth: 2,
-                                borderRadius: 5,
-                                backgroundColor: 'white'
-                            }}
+                            style={styles.cancelBtnStyle}
                         />  
                         <CustomButton 
                             title="Add"
@@ -137,6 +121,29 @@ const styles = StyleSheet.create({
         marginLeft: '5%',
         borderRadius: 5
     },
+    modalHeader:{
+        width: '80%',
+        marginLeft: 15,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingTop: 10,
+        paddingBottom: 10,
+        padding: 5
+    },
+    listStyle:{
+        width: '80%',
+        marginLeft: 15,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: 5
+    },
+    cancelBtnStyle:{
+        width: '40%',
+        borderColor: config.primaryColor,
+        borderWidth: 2,
+        borderRadius: 5,
+        backgroundColor: 'white'
+    }
 })
 
 

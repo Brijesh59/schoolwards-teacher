@@ -375,6 +375,7 @@ export async function pushSeriesEvents(requestData) {
     const formData = new FormData()
     formData.append('request_data', JSON.stringify(requestData))
     formData.append('appname', app_config.schoolName)
+    console.log('Form Data: ',formData)
     const networkRequest = new NetworkRequest()
     const data = await networkRequest.pushSeriesEvent(formData)
     return data

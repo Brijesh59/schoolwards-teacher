@@ -1,23 +1,27 @@
-import React, {useState} from 'react'
-import {StyleSheet, View, TouchableOpacity, Alert} from 'react-native'
-import { Container, Content, Text, Item, Input, Icon, Right, Left, DatePicker, Grid, Row, Col} from 'native-base'
-import RNPickerSelect from 'react-native-picker-select'
+import React, {useState, useEffect} from 'react'
+import {StyleSheet, View, Alert, TouchableOpacity, Text} from 'react-native'
+import { Container, Content, Item, Icon, Right,Button, DatePicker} from 'native-base'
+import AsyncStorage from '@react-native-community/async-storage'
+import Toast from 'react-native-simple-toast'
 import DateTimePicker from '@react-native-community/datetimepicker'
-
+import {CalendarIcon} from '../../components/common/Icons'
 import CustomHeader from '../../components/common/CustomHeader'
 import CustomInput from '../../components/common/CustomInput'
+import ActivityLoader from '../../components/common/ActivityLoader'
 import UploadAttatchment from '../../components/common/CustomUpload'
-import Button from '../../components/common/CustomButton'
+// import Button from '../../components/common/CustomButton'
 import Picker from '../../components/common/Picker'
 import Modal from '../../components/common/Modal'
-import {CalendarIcon} from '../../components/common/Icons'
+
 import config from '../../utils/config'
+import {getStudentsByClass, getTeacherDetails, pushSeriesEvents} from '../../utils/functions'
 
 export default function Event() {
+
     const [event, setEvent] = useState('')
     const [notes, setNotes] = useState('')
     const [venue, setVenue] = useState('')
-    const [students, setStudents] = useState(['Abc', 'Xyz', 'mno', 'Abc', 'Xyz', 'mno','Abc', 'Xyz', 'mno','Abc', 'Xyz', 'mno','Abc', 'Xyz', 'mno','Abc', 'Xyz', 'mno',])
+    const [students, setStudents] = useState([])
     const [selectedStudents, setSelectedStudents] = useState([])
     const [startDate, setStartDate] = useState( new Date())
     const [endDate, setEndDate] = useState( new Date())
@@ -26,14 +30,48 @@ export default function Event() {
     const [mode, setMode] = useState('date')
     const [value, setValue] = useState( new Date() )
     const [option, setOption] = useState('startDate')
-    const [classSection, setClassSection] = useState(['1 A-C-N', '1B', '2B'])
+    const [classSection, setClassSection] = useState([])
     const [selectedClassSection, setSelectedClassSection] = useState()
     const [isModalVisible, setIsModalVisible] = useState(false)
     const [isDateTimeModalVisible, setIsDateTimeModalVisible] = useState(false)
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
+
+    useEffect(() => {
+        async function fn(){
+            const [username, password] = await AsyncStorage.multiGet(["username", "password"])
+            const teacher = await getTeacherDetails()
+            const classDetails = JSON.parse(teacher.classDetails)
+            const classSection = classDetails
+                                    .map(c => c.standard + ' ' + c.division)
+            setClassSection(classSection)
+            setUsername(username[1])
+            setPassword(password[1])
+        }
+        fn()
+    }, [])
+
+    useEffect(() => {
+        async function fn(className, section){
+            const studentsData = await getStudentsByClass(className, section)
+            const students = studentsData.map(s => (
+                {
+                    name: s.first_name + ' ' + s.last_name,
+                    id: s.student_year_id
+                }
+            ))
+            setStudents(students)
+        }
+        if(classSection.length > 0 && classSection[selectedClassSection]){
+            const [className, section] = classSection[selectedClassSection].split(' ')
+            fn(className, section)
+        }
+    }, [selectedClassSection])
 
     function getDate(date = new Date()){
         let day = date.getDate()
-        let month = date.getMonth()
+        let month = date.getMonth() + 1
         let year = date.getFullYear()
 
         day = day < 10 ? '0' + day : day
@@ -109,24 +147,50 @@ export default function Event() {
         setSelectedStudents(selectedStudents)
     }
 
-    const handleSubmit = () => {
-        // if(!subject || !details || selectedStudents.length === 0){
-        //     Alert.alert(
-        //         'Alert',
-        //         'Please fill all the fields.'
-        //     )
-        //     return
-        // }
-       
+    const handleSubmit = async() => {
+        if(!event || !notes || selectedStudents.length === 0){
+            Alert.alert(
+                'Alert',
+                'Please fill all the fields.'
+            )
+            return
+        }
+        setIsLoading(true)
+        const [standard, division] = classSection[selectedClassSection].split(' ')
+        const requestData = {
+            username,
+            password,
+            eventName: event,
+            eventDesc: notes,
+            eventVenue: venue,
+            eventStartDate: getDate(startDate),
+            eventStartTime: getTime(startTime),
+            eventEndDate: getDate(endDate),
+            eventEndTime: getTime(endTime),
+            standard,
+            division,
+            selectoption: 'selected',
+            students: selectedStudents.map(s => s.id),
+            attatchment: '',
+            mimetype: ''
+        }
+        const data = await pushSeriesEvents(requestData)
+        setIsLoading(false)
+        if(data.response === 'success'){
+            setEvent('')
+            setNotes('')
+            setVenue('')
+            return Toast.show('Message Sent', Toast.SHORT, Toast.BOTTOM)
+        }
+        else{
+            return Toast.show('Failed to send Message', Toast.SHORT, Toast.BOTTOM)
+        } 
     }
 
     return (
         <Container> 
-            <CustomHeader 
-                title="Event"
-            />
-            <Content 
-                contentContainerStyle={styles.container}>
+            <CustomHeader title="Event" />
+            <Content contentContainerStyle={styles.container}>
                 <Text style={styles.title}>Add Event</Text>
                 <View style={styles.formContent}>
                     <CustomInput 
@@ -232,15 +296,22 @@ export default function Event() {
                     <Modal 
                         isModalVisible={isModalVisible}
                         setIsModalVisible={handleModalVisibility}
-                        students={[{name: 'Abc', id: 1}, {name: 'bcd', id: 2}, {name: 'bcd', id: 3},{name: 'bcd', id: 4},{name: 'bcd', id: 5},{name: 'bcd', id: 6},{name: 'bcd', id: 7},{name: 'bcd', id: 8}]}
+                        students={students}
                         onSave={handleSelectedStudents}
                     />
-                    <Button 
-                        title="Submit"
-                        onPressFunction={handleSubmit}
-                        style={{width: '60%', marginTop: 20}}
-                    />
-                </View>
+                    <TouchableOpacity 
+                        onPress={handleSubmit}
+                        style={isLoading ? styles.btnStyleLoading : styles.btnStyle}>  
+                        <Text 
+                            style={{color:'black', fontSize: 16, letterSpacing: 1}}uppercase={false}>
+                                Submit
+                        </Text>
+                        {
+                            isLoading && 
+                            <ActivityLoader style={{position:'absolute'}} />
+                        }
+                    </TouchableOpacity>
+                </View>  
             </Content>
         </Container>
     )
@@ -248,8 +319,8 @@ export default function Event() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'flex-start',
+        // flex: 1,
+        // justifyContent: 'flex-start',
         width: '98%',
         marginLeft: '1%',
     },
@@ -264,6 +335,29 @@ const styles = StyleSheet.create({
         marginTop: 10,
         fontSize: 16,
         fontWeight: '600'
-    }
+    },
+    btnStyle:{
+        width: '60%', 
+        padding: 10,
+        textAlign: 'center',
+        alignItems: 'center', 
+        borderRadius: 5,
+        marginTop: 20,
+        marginBottom: 20,
+        backgroundColor: config.secondaryColor,
+        justifyContent: 'center',
+    },
+    btnStyleLoading:{
+        width: '60%', 
+        padding: 10,
+        textAlign: 'center',
+        alignItems: 'center', 
+        borderRadius: 5,
+        marginTop: 20,
+        marginBottom: 20,
+        backgroundColor: config.lightGrey,
+        justifyContent: 'center',
+    },
+
 })
   

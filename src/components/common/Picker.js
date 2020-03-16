@@ -14,25 +14,21 @@ export default class PickerInputExample extends React.Component{
         this.setState({value})
         this.props.onChange(value)
     }
-    onPress = () => {
-        console.log('Pressed')
-    }
     render(){
+        const {name, items} = this.props
         return (
             <Item regular picker style={[styles.pickerStyle, this.props.style]}>
-                <Text style={{paddingLeft: 10, color: '#707070', fontSize: 16}}>{this.props.name}</Text>
+                <Text style={{paddingLeft: 10, color: '#707070', fontSize: 16}}>{name}</Text>
                 <Picker
                     mode="dropdown"
                     iosIcon={<Icon name="arrow-down" />}
                     selectedValue={this.state.value}
-                    onValueChange={this.onValueChange} >
-                    {/* {<Picker.Item label={this.props.name} value={this.props.name} />} */}
+                    onValueChange={this.onValueChange}>
                     {
-                        this.props.items && 
-                        this.props.items.map((item, i) => <Picker.Item label={item} value={i} key={i} />)
+                        items && 
+                        items.map((item, i) => <Picker.Item label={item} value={i} key={i} />)
                     }
                 </Picker>
-                {/* <Icon name="ios-arrow-down" style={{fontSize: 15, marginRight: 10, color: '#707070'}}/> */}
             </Item>
         )
     }

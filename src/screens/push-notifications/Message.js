@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import {StyleSheet, View, Alert} from 'react-native'
-import { Container, Content, Text, Toast} from 'native-base'
+import {StyleSheet, View, Alert, TouchableOpacity} from 'react-native'
+import { Container, Content, Text} from 'native-base'
+import Toast from 'react-native-simple-toast'
 import AsyncStorage from '@react-native-community/async-storage'
 
 import CustomHeader from '../../components/common/CustomHeader'
@@ -8,7 +9,6 @@ import ActivityLoader from '../../components/common/ActivityLoader'
 import CustomInput from '../../components/common/CustomInput'
 import Button from '../../components/common/CustomButton'
 import Picker from '../../components/common/Picker'
-import Modal from '../../components/common/Modal'
 
 import config from '../../utils/config'
 import {getStudentsByClass, getTeacherDetails, pushSeriesEvents} from '../../utils/functions'
@@ -24,15 +24,14 @@ export default function Message() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [isLoading, setIsLoading] = useState(false)
-    const [sentStatus, setSentStatus] = useState(false)
-    const [message, setMessage] = useState('')
 
     useEffect(() => {
         async function fn(){
             const [username, password] = await AsyncStorage.multiGet(["username", "password"])
             const teacher = await getTeacherDetails()
             const classDetails = JSON.parse(teacher.classDetails)
-            const classSection = classDetails.map(c => c.standard + ' ' + c.division)
+            const classSection = classDetails
+                                    .map(c => c.standard + ' ' + c.division)
             setClassSection(classSection)
             setUsername(username[1])
             setPassword(password[1])
@@ -96,7 +95,7 @@ export default function Message() {
             title: subject,
             message: details,
             attatchment: '',
-            series: 'Announcment',
+            series: 'message',
             mimetype: '',
             standard,
             division,
@@ -106,25 +105,19 @@ export default function Message() {
         const data = await pushSeriesEvents(requestData)
         setIsLoading(false)
         if(data.response === 'success'){
-            setMessage('Message Sent')
-            console.log('Message Sent')
-            return Toast.show({text: message, buttonText: 'Okay'})
+            setSubject('')
+            setDetails('')
+            return Toast.show('Message Sent', Toast.SHORT, Toast.BOTTOM)
         }
         else{
-            setMessage('Message Sending Failed')
-            console.log('Message Sending Failed')
-            return Toast.show({text: message, buttonText: 'Okay'})
-        }
-        console.log(data)
+            return Toast.show('Failed to send Message', Toast.SHORT, Toast.BOTTOM)
+        } 
     }
 
     return (
         <Container> 
-            <CustomHeader 
-                title="Message"
-            />
-            <Content 
-                contentContainerStyle={styles.container}>
+            <CustomHeader title="Message" />
+            <Content contentContainerStyle={styles.container}>
                 <Text style={styles.title}>Message Details</Text>
                 <View style={styles.formContent}>
                     <CustomInput 
@@ -162,8 +155,18 @@ export default function Message() {
                         onPressFunction={handleSubmit}
                         style={{width: '60%', marginTop: 20}}
                     />
-                    {/* {!isLoading && sentStatus } */}
-                    {isLoading && <ActivityLoader />}
+                    <TouchableOpacity 
+                        onPress={handleSubmit}
+                        style={isLoading ? styles.btnStyleLoading : styles.btnStyle}>  
+                        <Text 
+                            style={{color:'black', fontSize: 16, letterSpacing: 1}}uppercase={false}>
+                                Submit
+                        </Text>
+                        {
+                            isLoading && 
+                            <ActivityLoader style={{position:'absolute'}} />
+                        }
+                    </TouchableOpacity>
                 </View>
             </Content>
         </Container>
@@ -188,6 +191,28 @@ const styles = StyleSheet.create({
         marginTop: 10,
         fontSize: 16,
         fontWeight: '600'
-    }
+    },
+    btnStyle:{
+        width: '60%', 
+        padding: 10,
+        textAlign: 'center',
+        alignItems: 'center', 
+        borderRadius: 5,
+        marginTop: 20,
+        marginBottom: 20,
+        backgroundColor: config.secondaryColor,
+        justifyContent: 'center',
+    },
+    btnStyleLoading:{
+        width: '60%', 
+        padding: 10,
+        textAlign: 'center',
+        alignItems: 'center', 
+        borderRadius: 5,
+        marginTop: 20,
+        marginBottom: 20,
+        backgroundColor: config.lightGrey,
+        justifyContent: 'center',
+    },
 })
   
