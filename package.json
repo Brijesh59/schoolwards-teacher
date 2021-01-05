@@ -17,7 +17,7 @@
     "@react-native-firebase/app": "^6.3.4",
     "@react-native-firebase/messaging": "^6.3.4",
     "@types/react-native-snap-carousel": "^3.7.4",
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "concurrently": "^5.0.2",
     "native-base": "^2.13.8",
     "react": "16.9.0",
